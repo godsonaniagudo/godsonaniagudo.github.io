@@ -3,9 +3,14 @@ h1 {
 
 }
 
+p {
+  margin-bottom: 0px;
+}
+
 .intro-content{
   color: #000;
   background-color: #000;
+  text-align: center;
 }
 
 .intro-div-section {
@@ -14,8 +19,17 @@ h1 {
   background-size: cover;
 }
 
+.my-image{
+  width: 100%;
+}
+
 .my-nav-links{
   color: black;
+}
+
+.my-picture-text{
+  text-align: center;
+
 }
 
 /*ids */
@@ -23,11 +37,17 @@ h1 {
 #intro-paragraph{
   padding-bottom: 200px;
   color: white;
+  margin-bottom: 0px;
 }
 
 #intro-title-h1 {
   color: white;
 
+}
+
+#my-picture-header-text{
+  margin-top: 50%;
+  margin-bottom: auto;
 }
 
 #triangle-image {
