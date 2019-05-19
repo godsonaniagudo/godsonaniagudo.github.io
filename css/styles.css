@@ -1,0 +1,35 @@
+/* default selectors */
+h1 {
+
+}
+
+.intro-content{
+  color: #000;
+  background-color: #000;
+}
+
+.intro-div-section {
+  text-align: center;
+  background-image: url("introbg.jpg");
+  background-size: cover;
+}
+
+.my-nav-links{
+  color: black;
+}
+
+/*ids */
+
+#intro-paragraph{
+  padding-bottom: 200px;
+  color: white;
+}
+
+#intro-title-h1 {
+  color: white;
+
+}
+
+#triangle-image {
+  margin-top: 200px;
+}
