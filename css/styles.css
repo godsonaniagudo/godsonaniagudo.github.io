@@ -145,9 +145,7 @@ p {
 
 @media screen and (max-width: 991px) {
 /* start of large tablet styles */
-h1 {
-  font-size: 2rem;
-}
+
 
 }
 
@@ -158,5 +156,7 @@ h1 {
 
 @media screen and (max-width: 479px) {
 /* start of phone styles */
-
+h1 {
+  font-size: 2rem;
+}
 }
