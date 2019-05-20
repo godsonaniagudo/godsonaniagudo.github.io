@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
 
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Heebo:800|Rammetto+One&display=swap" rel="stylesheet">
+
   <!-- favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,17 +29,17 @@
 <body>
   <section class="navigation-section">
     <nav class="navbar navbar-expand-lg navbar-dark bg-light">
-      <a class="navbar-brand my-nav-links" href="#">Godson.Aniagudo</a>
+      <a class="navbar-brand my-nav-links" id="brand-text-anchor" href="#">Godson.Aniagudo</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="#" class="nav-link my-nav-links">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link my-nav-links">What I Do</a></li>
-          <li class="nav-item"><a href="#" class="nav-link my-nav-links">Tools I work With</a></li>
-          <li class="nav-item"><a href="#" class="nav-link my-nav-links">About Me</a></li>
-          <li class="nav-item"><a href="#" class="nav-link my-nav-links">Contact Me</a></li>
+          <li class="nav-item"><a href="#intro-section" class="nav-link my-nav-links">Home</a></li>
+          <li class="nav-item"><a href="#what-i-do-section" class="nav-link my-nav-links">What I Do</a></li>
+          <li class="nav-item"><a href="#tools-i-work-with-section" class="nav-link my-nav-links">Tools I work With</a></li>
+          <li class="nav-item"><a href="#about-me-section" class="nav-link my-nav-links">About Me</a></li>
+          <li class="nav-item"><a href="#contact-me-section" class="nav-link my-nav-links">Contact Me</a></li>
         </ul>
       </div>
     </nav>
@@ -44,7 +47,7 @@
   </section>
   <!-- Intro section -->
 
-  <section class="intro">
+  <section class="intro" id="intro-section">
     <div class="row">
       <div class="col-12">
         <div class="intro-content">
@@ -77,7 +80,7 @@
 
 
   <!-- What I do section -->
-  <section class="what-i-do">
+  <section class="what-i-do" id="what-i-do-section">
     <div class="container what-i-do-container">
       <div class="">
         <h1 class="what-i-do-header">What I Do</h1>
@@ -110,8 +113,47 @@
 
 
 
+  <!-- About me section -->
+  <section class="about-me" id="about-me-section">
+    <div class="row about-me-div">
+      <div class="col-md-6">
+        <h1>About Me</h1>
+        <p>I am Godson</p>
+      </div>
+      <div class="col-md-6">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/one.jpeg" class="d-block w-100" alt="godson aniagudo working">
+            </div>
+            <div class="carousel-item">
+              <img src="images/two.jpeg" class="d-block w-100" alt="godson aniagudo picture">
+            </div>
+            <div class="carousel-item">
+              <img src="images/three.jpeg" class="d-block w-100" alt="godson aniagudo picture">
+            </div>
+            <div class="carousel-item">
+              <img src="images/four.jpeg" class="d-block w-100" alt="godson aniagudo picture">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
   <!-- Tools I work with section -->
-  <section class="tools-i-work-with">
+  <section class="tools-i-work-with" id="tools-i-work-with-section">
     <h1>Tools I Work With</h1>
     <div class="container">
       <img class="tools-images" src="images/studio.png" alt="Android Studio logo">
@@ -125,27 +167,40 @@
 
 
 
-  <!-- About me section -->
-  <section class="about-me">
-    <h1>About Me</h1>
-    <p>I am Godson</p>
-  </section>
-
-
-
   <!-- Contact me section -->
-  <section class="contact-me">
-    <h1>Contact Me</h1>
-    <form class="" action="index.html" method="post">
-
-    </form>
-    <h3>You can also reach me on social media!</h3>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+  <section class="contact-me" id="contact-me-section">
+    <div class="container" id="contact-me-container">
+      <h1>Contact Me</h1>
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" class="contact-me-input" placeholder="Your Name">
+        <input type="text" name="" value="" class="contact-me-input" placeholder="Your Email Address">
+        <textarea name="name" rows="8" cols="80" class="contact-me-input" placeholder="Your Message..."></textarea>
+        <button type="button" name="button" class="btn btn-primary btn-lg" id="submit-contact-button">Submit</button>
+      </form>
+    </div>
   </section>
 
+  <!-- footer section -->
+  <section class="footer-section">
+    <div class="row">
+      <div class="col-12">
+        <h2>You can also find me on:</h2>
+      </div>
+      <div class="col-12 social-icons-div">
+        <a href="https://facebook.com/godsontieraniagudo" target="_blank"><img  class="social-icons" src="images/fb.png" alt=""></a>
+        <a href="https://twitter.com/greysweaterdude"><img  class="social-icons" src="images/tw.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/godson-aniagudo-065304168"><img  class="social-icons" src="images/li.png" alt=""></a>
+        <a href="https://github.com/godsonaniagudo"><img  class="social-icons" src="images/gh.png" alt=""></a>
+
+      </div>
+      <div class="col-12">
+
+      </div>
+
+
+
+    </div>
+  </section>
 
 </body>
 

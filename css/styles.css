@@ -3,6 +3,29 @@ p {
   margin-bottom: 0;
 }
 
+.about-me-div {
+  text-align: center;
+}
+
+.contact-me{
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 50px;
+}
+
+.contact-me-input{
+  display: block;
+  margin-top: 20px;
+
+  padding: 15px 15px 15px;
+  width: 100%;
+  border-radius: 20px;
+  border-width: 1px;
+  border-style: inset;
+
+}
+
 .intro-content{
   background-color: #000;
   color: #000;
@@ -13,6 +36,13 @@ p {
   background-image: url("introbg.jpg");
   background-size: cover;
   text-align: center;
+}
+
+.footer-section {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding-top: 20px;
 }
 
 .my-image{
@@ -28,7 +58,30 @@ p {
 
 }
 
+.navigation-section {
+  position: fixed;
+  width: 100%;
+  z-index: +1;
+}
+
+.social-icons {
+  height: 50px;
+  margin-left: 30px;
+  width: 50px;
+}
+
+.social-icons:hover {
+  height: 60px;
+  width: 60px;
+}
+
+.social-icons-div {
+  margin-bottom: 20px;
+}
+
 .tools-i-work-with{
+  background-color: #000;
+  color: #fff;
   padding-bottom: 100px;
   padding-top: 100px;
   text-align: center;
@@ -59,21 +112,29 @@ p {
 
 
 /*ids */
+#brand-text-anchor {
+  font-size: 2em;
+  font-family: 'Heebo', sans-serif;
+}
 
 #intro-paragraph{
-  padding-bottom: 200px;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  padding-bottom: 200px;
 }
 
 #intro-title-h1 {
   color: white;
-
 }
 
 #my-picture-header-text{
   margin-bottom: auto;
   margin-top: 50%;
+}
+
+#submit-contact-button {
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 #triangle-image {
