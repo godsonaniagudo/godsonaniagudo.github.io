@@ -1,10 +1,23 @@
 /* default selectors */
+
+html {
+  scroll-behavior: smooth;
+}
+
 p {
   margin-bottom: 0;
 }
 
+.about-me-text-row {
+  padding-top: 20px;
+}
+
 .about-me-div {
   text-align: center;
+}
+
+.about-me-text {
+  text-align: justify;
 }
 
 .contact-me{
@@ -79,6 +92,7 @@ p {
   margin-bottom: 20px;
 }
 
+
 .tools-i-work-with{
   background-color: #000;
   color: #fff;
@@ -112,6 +126,11 @@ p {
 
 
 /*ids */
+
+#about-me-h1 {
+   padding-top: 40px;
+}
+
 #brand-text-anchor {
   font-size: 2em;
   font-family: 'Heebo', sans-serif;
@@ -156,13 +175,22 @@ h1 {
 }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 700px) {
 /* start of phone styles */
 h1 {
   font-size: 2rem;
 }
 
+#intro-paragraph{
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 20%;
+}
+
+
 p {
-  font-size: 3rem;
+  font-size: 1rem;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 }

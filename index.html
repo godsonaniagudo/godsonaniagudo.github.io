@@ -14,9 +14,9 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <!-- Style sheets -->
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="#intro-section" class="nav-link my-nav-links">Home</a></li>
-          <li class="nav-item"><a href="#what-i-do-section" class="nav-link my-nav-links">What I Do</a></li>
+          <li class="nav-item"><a href="#what-i-do-section" class="nav-link my-nav-links to-what-i-do-link">What I Do</a></li>
           <li class="nav-item"><a href="#tools-i-work-with-section" class="nav-link my-nav-links">Tools I work With</a></li>
           <li class="nav-item"><a href="#about-me-section" class="nav-link my-nav-links">About Me</a></li>
           <li class="nav-item"><a href="#contact-me-section" class="nav-link my-nav-links">Contact Me</a></li>
@@ -90,12 +90,12 @@
         <div class="col-md-4 col-sm-12 what-i-do-columns what-i-do-items">
           <img src="images/android.png" alt="">
           <h2 class="what-i-do-column-h2-header">Android Development</h2>
-          <p>I do android development</p>
+          <p>I design and develop Native android apps</p>
         </div>
         <div class="col-md-4 col-sm-12 what-i-do-columns what-i-do-items">
           <img src="images/web.png" alt="">
           <h2 class="what-i-do-column-h2-header">Web Development</h2>
-          <p>Web Development</p>
+          <p>I develop responsive, dynamic websites</p>
         </div>
         <div class="col-md-4 col-sm-12 what-i-do-columns what-i-do-items">
           <img src="images/warrior.png" alt="">
@@ -117,8 +117,30 @@
   <section class="about-me" id="about-me-section">
     <div class="row about-me-div">
       <div class="col-md-6">
-        <h1>About Me</h1>
-        <p>I am Godson</p>
+        <h1 id="about-me-h1">About Me</h1>
+        <div class="container">
+          <div class="row about-me-text-row">
+            <div class="col-md-6 col-sm-12">
+              <h2>Up Close</h2>
+              <p class="about-me-text">My name is Godson Aniagudo. I am a whole lot of things in one. Web developer, mobile app developer, creative writer, hobby photographer, avid reader....that list is endless, so I might as well truncate it there.
+              </p>
+              <br>
+              <p class="about-me-text">I live in Lagos (have lived here almost all my life asides a five-year stint on Owerri for university). I studied Agricultural Economics and Computer Science (no prizes for guessing which one I prefer!).</p>
+              <br>
+              <p class="about-me-text">I love soft and alternative rock. Naturally, I'm a huge fan of Coldplay! I also love Linkin Park, 5 Seconds of Summer, 21 Pilots, Imagine Dragons, U2, Vampire Weekend and Fallout Boy</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <h2>My Stacks</h2>
+              <p class="about-me-text">I would say my main stacks are Web Development (full stack) and native Android development. For web dev, I use HTML, CSS, Javascript and MySQL (a lot!) though I also use frameworks like Bootstrap (also a lot!),
+                NodeJS etc.</p>
+              <br>
+              <p class="about-me-text">For native Android development, I use Java and Kotlin, though I use Kotlin way more (c'mon, it's a really intuitive language. It like takes the best of Java and Javascript and combines them in one. It...okay,
+                I'm starting to evangelize here! But it's really an amazing language.)</p>
+              <br>
+              <p class="about-me-text">I have done a whole lot of concept work but I do ensure they are fully functional and you should find a few in my portfolio section</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -187,10 +209,10 @@
         <h2>You can also find me on:</h2>
       </div>
       <div class="col-12 social-icons-div">
-        <a href="https://facebook.com/godsontieraniagudo" target="_blank"><img  class="social-icons" src="images/fb.png" alt=""></a>
-        <a href="https://twitter.com/greysweaterdude"><img  class="social-icons" src="images/tw.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/godson-aniagudo-065304168"><img  class="social-icons" src="images/li.png" alt=""></a>
-        <a href="https://github.com/godsonaniagudo"><img  class="social-icons" src="images/gh.png" alt=""></a>
+        <a href="https://facebook.com/godsontieraniagudo" target="_blank"><img class="social-icons" src="images/fb.png" alt=""></a>
+        <a href="https://twitter.com/greysweaterdude"><img class="social-icons" src="images/tw.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/godson-aniagudo-065304168"><img class="social-icons" src="images/li.png" alt=""></a>
+        <a href="https://github.com/godsonaniagudo"><img class="social-icons" src="images/gh.png" alt=""></a>
 
       </div>
       <div class="col-12">
@@ -201,6 +223,8 @@
 
     </div>
   </section>
+
+  <script src="js/index.js" charset="utf-8"></script>
 
 </body>
 
