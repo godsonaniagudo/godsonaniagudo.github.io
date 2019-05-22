@@ -2,6 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.card-img-top {
+
+  padding:10px;
+  max-height: 300px;
+}
+.discoverImages {
+  padding:10px;
+}
 .fadeIn {
   opacity: 1;
   transition: 1s opacity;
@@ -16,7 +24,7 @@ html {
   margin-top: 150px;
   display: inline-block;
   border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #ff0b55;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -24,6 +32,19 @@ html {
 }
 .landingIcons {
   text-align: right;
+}
+
+.loginHeaderText {
+  margin-top: 30px;
+}
+
+.logRegArea {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: solid 1px #bdbdbd;
 }
 
 .headerSectionTexts{
@@ -35,9 +56,7 @@ html {
 }
 
 #footerSection {
-  height: 50px;
-  width: 100%;
-  background-color: #000;
+
 }
 
 #loaderSection {
@@ -67,7 +86,10 @@ html {
   padding-right: 20px;
   margin-top: 20px;
 }
-
+.socialImagesFooter {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .sectCard {
   text-align: center;
   border: solid 1px #ccc;
@@ -79,6 +101,16 @@ html {
 
 .section-class {
   text-align: center;
+}
+
+.pinkButton {
+  padding: 10px;
+  background-color: #ff0b55;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sideFonts{
@@ -98,6 +130,11 @@ html {
 .userLeftSidePanel {
   background-color: #ff0b55;
   color: #fff;
+  padding-right: 10px;
+}
+
+#leftUserPanel {
+  padding-left: 10px;
 }
 
 #blah {
@@ -126,9 +163,11 @@ input[type=file] {
 }
 
 #footerSection {
-  height: 50px;
+  padding-top: 20px;
+  padding-bottom: 5px;
   width: 100%;
   background-color: #000;
+  text-align: center;
 }
 
 #headerSectionTitleText {
@@ -169,6 +208,13 @@ input[type=file] {
 
 #userLandingSection {
 
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7,
+.col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4,
+.col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @keyframes spin {

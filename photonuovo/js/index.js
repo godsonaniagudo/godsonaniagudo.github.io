@@ -9,6 +9,17 @@ var day = dateOBJ.getDate();
 var month = dateOBJ.getMonth() + 1;
 var year = dateOBJ.getFullYear();
 // Event Listeners
+
+document.getElementById("myProfileLink").addEventListener("click",function(){
+removeElementFromFlow("discoverSection");
+addElementToFlow("userAccountSection");
+});
+
+document.getElementById("discoverLink").addEventListener("click",function(){
+  window.location.reload();
+});
+
+
 document.getElementById("uploadImageButton").addEventListener("click", function() {
 
   if (imageLocation != "") {
@@ -29,7 +40,7 @@ document.getElementById("uploadImageButton").addEventListener("click", function(
       console.log('Uploaded a data_url string!');
     });
   } else {
-    ("Image location is empty");
+    alert("Image location is empty");
   }
 });
 
@@ -41,6 +52,7 @@ setTimeout(function() {
     removeElementFromFlow("headerSection");
     removeElementFromFlow("recents-section");
     removeElementFromFlow("logRegSection");
+
   } else {
     removeElementFromFlow("recents-section");
     removeElementFromFlow("logRegSection");
@@ -61,6 +73,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     removeElementFromFlow("headerSection");
     removeElementFromFlow("recents-section");
     removeElementFromFlow("logRegSection");
+    removeElementFromFlow("userAccountSection");
     addElementToFlow("userLandingSection");
     var dataRef = firebase.database().ref('imagesDetails');
     dataRef.on('value', function(snapshot) {
@@ -68,7 +81,6 @@ firebase.auth().onAuthStateChanged(function(user) {
       snapshot.forEach(function(child) {
 
         document.getElementById('cardImageId'+idVal).src = child.val().image;
-        (child.val().image);
 
         document.getElementById('cardImageId'+idVal).addEventListener("click",function(){
           document.getElementById("largeModalImage").src = child.val().image;
@@ -82,6 +94,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     addElementToFlow("logRegSection");
     removeElementFromFlow("userLandingSection");
+    removeElementFromFlow("userAccountSection");
   }
 });
 
@@ -114,10 +127,8 @@ document.getElementById("loginButton").addEventListener("click", function() {
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
-    (errorMessage);
+    alert(errorMessage);
   });
-
-  ("Done");
 });
 
 document.getElementById("registerButton").addEventListener("click", function() {
@@ -127,8 +138,6 @@ document.getElementById("registerButton").addEventListener("click", function() {
     var errorCode = error.code;
     var errorMessage = error.message;
   });
-
-  ("Done");
 });
 
 function writeImageData(userId, imageID, imageLink, postedDay, postedMonth, postedYear) {

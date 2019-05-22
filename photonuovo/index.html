@@ -34,8 +34,8 @@
           <div class="row">
             <div class="col-12" id="theModalBody">
 
-              <img id="blah" src="images/imagePlaceholder.png" alt="your image"/>
-              <input id="uploaderButton" type='file' onchange="readURL(this);" style="margin-top:20px;"/>
+              <img id="blah" src="images/imagePlaceholder.png" alt="your image" />
+              <input id="uploaderButton" type='file' onchange="readURL(this);" style="margin-top:20px;" />
             </div>
           </div>
 
@@ -206,31 +206,28 @@
           <h1 id="rightSideHeader">PhotoNuovo</h1>
           <p id="taglineText">Everyone's A Photographer</p>
         </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="card">
 
 
-            <div class="card-body">
-              <h2 id="loginHeaderText">Login</h2>
-              <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="loginEmailField">
-              <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="loginPasswordField">
-              <a href="#" id="loginButton" class="btn btn-primary margTop20">Login</a>
-            </div>
-          </div>
+        <div class="col-md-3 col-sm-12">
+
         </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="card">
 
-            <div class="card-body">
-              <h2 id="registerHeaderText">Register</h2>
-              <form class="" action="index.html" method="post">
-                <input type="text" name="" value="" class="regLogItems" placeholder="Name" id="regNameField">
-                <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="regEmailField">
-                <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="regPasswordField">
-              </form>
-              <a href="#" id="registerButton" class="btn btn-primary margTop20">Register</a>
-            </div>
-          </div>
+
+        <div class="col-md-3 col-sm-12 logRegArea">
+          <h2 id="loginHeaderText" style="margin-top:30px;">Login</h2>
+          <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="loginEmailField">
+          <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="loginPasswordField">
+          <br>
+          <button type="button" name="button" id="loginButton" class="pinkButton">Login</button>
+        </div>
+        <div class="col-md-3 col-sm-12 logRegArea">
+          <h2 id="registerHeaderText">Register</h2>
+          <form class="" action="index.html" method="post">
+            <input type="text" name="" value="" class="regLogItems" placeholder="Name" id="regNameField">
+            <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="regEmailField">
+            <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="regPasswordField">
+          </form>
+          <button type="button" id="registerButton" class="pinkButton" name="button">Register</button>
         </div>
 
       </div>
@@ -240,9 +237,7 @@
     </section>
 
     <!-- user-account-page -->
-    <section>
 
-    </section>
 
 
 
@@ -250,11 +245,15 @@
     <section id="userLandingSection">
       <div class="row">
 
-        <div class="col-md-2 col-sm-12 userLeftSidePanel">
+        <div class="col-md-2 col-sm-12 userLeftSidePanel" id="leftUserPanel">
           <img src="images/defaultImage.png" alt="" id="userLeftPanelProfilePic" style="background-color:#fff;">
           <h3>Name</h3>
-          <a href="#" class="sideFonts">
-            <p>My Shots</p>
+
+          <a href="#" class="sideFonts" id="discoverLink">
+            <p>#Discover</p>
+          </a>
+          <a href="#" class="sideFonts" id="myProfileLink">
+            <p>My Profile</p>
           </a>
           <a href="#" class="sideFonts">
             <p>My Followers</p>
@@ -279,8 +278,12 @@
             <p id="taglineText">Everyone's A Photographer</p>
           </div>
 
+          <div class="row" id="userAccountSection">
+            <h1>Hello There</h1>
+          </div>
 
-          <div class="row">
+
+          <div class="row" id="discoverSection">
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
               <img id="cardImageId1" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
@@ -288,34 +291,34 @@
               <img id="cardImageId2" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId3" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId3" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId4" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId4" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId5" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId5" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId6" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId6" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId7" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId7" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId8" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId8" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId9" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId9" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId10" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId10" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId11" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId11" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <img  id="cardImageId12" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+              <img id="cardImageId12" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
 
 
@@ -346,6 +349,24 @@
 
     <!-- footer section -->
     <section id="footerSection">
+      <div class="row">
+        <div class="col-12">
+          <img class="socialImagesFooter" src="images/facebook.png" alt="">
+          <img class="socialImagesFooter" src="images/twitter.png" alt="">
+          <img class="socialImagesFooter" src="images/instagram.png" alt="">
+          <img class="socialImagesFooter" src="images/snapchat.png" alt="">
+        </div>
+        <div class="col-12">
+          <p style="margin-bottom:0;margin-top:5px;color:##373737;">2019 PhotoNuovo by Godson Aniagudo</p>
+        </div>
+
+      </div>
+      <div class="">
+
+      </div>
+
+
+
 
 
     </section>
