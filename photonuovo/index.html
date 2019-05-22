@@ -6,6 +6,11 @@
   <title>PhotoNuovo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- google font link -->
+  <link href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Pacifico&display=swap" rel="stylesheet">
+
   <!-- Bootstrap Css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -46,7 +51,29 @@
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
-        <img id="largeModalImage" src="images/placeholder.jpg" alt="">
+        <div class="row" style="text-align:center;">
+          <div class="col-12">
+            <img id="largeModalImage" src="images/placeholder.jpg" alt="">
+          </div>
+          <div class="col-12" style="margin-top:20px;">
+            <form class="" action="index.html" method="post">
+              <textarea placeholder="Type your comment..." name="name" rows="8" cols="80"></textarea>
+            </form>
+          </div>
+          <div class="col-12" style="margin-top:20px;">
+            <button type="button" name="button" class="btn btn-primary">Post Comment</button>
+          </div>
+          <div class="col-12" style="margin-top:20px;">
+            <h3>Comments(0)</h3>
+          </div>
+
+
+
+        </div>
+
+
+
+        </form>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -218,152 +245,73 @@
     <!-- user-landing-section -->
     <section id="userLandingSection">
       <div class="row">
+
         <div class="col-md-2 col-sm-12 userLeftSidePanel">
-          <h2>PhotoNuovo</h2>
-          <img src="images/placeholder.jpg" alt="" id="userLeftPanelProfilePic">
+          <img src="images/defaultImage.png" alt="" id="userLeftPanelProfilePic" style="background-color:#fff;">
           <h3>Name</h3>
-          <a href="#">
+          <a href="#" class="sideFonts">
             <p>My Shots</p>
           </a>
-          <a href="#">
+          <a href="#" class="sideFonts">
             <p>My Followers</p>
           </a>
-          <a href="#">
+          <a href="#" class="sideFonts">
             <p>Shots I Like</p>
           </a>
-          <a href="#">
+          <a href="#" class="sideFonts">
             <p>Following</p>
           </a>
-          <a href="#" id="signOutLink">
+          <a href="#" id="signOutLink" class="sideFonts">
             <p>Sign Out</p>
           </a>
-          <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Upload A Shot</button>
+          <button type="button" name="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">Upload A Shot</button>
 
 
 
         </div>
         <div class="col-md-10 col-sm-12">
-          <h3>#Discover</h3>
+          <div class="col-12 landingHead" style="margin-top:20px;">
+            <h1 id="rightSideHeader">PhotoNuovo</h1>
+            <p id="taglineText">Everyone's A Photographer</p>
+          </div>
+
+
           <div class="row">
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img id="cardImageId1" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  
-                </div>
-              </div>
+              <img id="cardImageId1" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img id="cardImageId2" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img id="cardImageId2" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId3" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId3" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId4" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId4" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId5" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId5" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId6" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId6" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId7" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId7" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId8" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId8" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId9" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId9" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId10" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId10" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId11" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId11" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
             <div class="col-md-4 col-sm-12" style="margin-top:20px;">
-              <div class="card">
-                <img  id="cardImageId12" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                </div>
-              </div>
+              <img  id="cardImageId12" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
             </div>
 
 

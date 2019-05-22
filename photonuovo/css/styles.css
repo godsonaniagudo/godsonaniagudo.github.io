@@ -7,6 +7,11 @@ html {
   transition: 1s opacity;
 }
 
+.landingHead{
+  background-color: #fff;
+  text-align: center;
+}
+
 .loader {
   margin-top: 150px;
   display: inline-block;
@@ -17,7 +22,9 @@ html {
   height: 120px;
   animation: spin 2s linear infinite;
 }
-
+.landingIcons {
+  text-align: right;
+}
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -70,6 +77,10 @@ html {
   text-align: center;
 }
 
+.sideFonts{
+  color: #fff;
+}
+
 .top-text {
   position: absolute;
   left: 10%;
@@ -78,7 +89,7 @@ html {
 }
 
 .userLeftSidePanel {
-  background-color: #000;
+  background-color: #ff0b55;
   color: #fff;
 }
 
@@ -92,10 +103,18 @@ input[type=file] {
   border-radius: 15px;
 }
 
+#discoverTextHead {
+  color: #05a19c;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 #userLeftPanelProfilePic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fff;
   margin-top: 70px;
 }
 
@@ -114,6 +133,16 @@ input[type=file] {
   margin-top: 20px;
 }
 
+#rightSideHeader {
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  color: #ff0b55;
+}
+
+#taglineText {
+  font-family: 'Pacifico', cursive;
+}
+
 #visibleBodySection {
   display: none;
 }
@@ -122,7 +151,9 @@ input[type=file] {
   text-align: center;
 }
 
-#userLandingSection {}
+#userLandingSection {
+
+}
 
 @keyframes spin {
   0% {
