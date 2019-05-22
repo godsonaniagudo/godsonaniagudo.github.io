@@ -25,6 +25,10 @@ html {
 .landingIcons {
   text-align: right;
 }
+
+.headerSectionTexts{
+  color: #fff;
+}
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -122,6 +126,11 @@ input[type=file] {
   height: 50px;
   width: 100%;
   background-color: #000;
+}
+
+#headerSectionTitleText {
+  font-family: 'Comfortaa', cursive;
+  font-size: 60px;
 }
 
 #largeModalImage {

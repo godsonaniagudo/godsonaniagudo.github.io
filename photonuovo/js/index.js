@@ -42,7 +42,8 @@ setTimeout(function() {
     removeElementFromFlow("recents-section");
     removeElementFromFlow("logRegSection");
   } else {
-    // No user is signed in.
+    removeElementFromFlow("recents-section");
+    removeElementFromFlow("logRegSection");
   }
 }, 3000);
 
