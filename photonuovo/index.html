@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PhotoNuovo</title>
+
+  <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Internal Css -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- loader div -->
+  <section id="loaderSection">
+    <div class="loader">
+
+    </div>
+  </section>
+
+
+  <!-- Visible body -->
+  <section id="visibleBodySection">
+    <!-- header section -->
+    <section id="headerSection">
+      <div class="top-text">
+        <h1>PhotoNuovo</h1>
+        <p>Welcome To PhotoNuovo</p>
+        <button type="button" name="button" id="toRegisterLoginSection">Register/Login</button>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="images/c1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/c2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/c3.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/c4.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="images/c5.jpg" alt="Third slide">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- recents section -->
+    <section class="section-class" id="recents-section">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 recents-cards">
+          <div class="card">
+            <img class="card-img-top" src="images/placeholder.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" id="recents-card-6" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- login/register section -->
+    <section id="logRegSection">
+      <div class="row recents-cards">
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+
+
+            <div class="card-body">
+              <h2 id="loginHeaderText">Login</h2>
+              <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="loginEmailField">
+              <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="loginPasswordField">
+              <a href="#" id="loginButton" class="btn btn-primary margTop20">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card">
+
+            <div class="card-body">
+              <h2 id="registerHeaderText">Register</h2>
+              <form class="" action="index.html" method="post">
+                <input type="text" name="" value="" class="regLogItems" placeholder="Name" id="regNameField">
+                <input type="email" name="" value="" class="regLogItems" placeholder="Email" id="regEmailField">
+                <input type="password" name="" value="" class="regLogItems" placeholder="Password" id="regPasswordField">
+              </form>
+              <a href="#" id="registerButton" class="btn btn-primary margTop20">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <!-- user-account-page -->
+    <section>
+
+    </section>
+
+
+
+    <!-- user-landing-section -->
+    <section id="userLandingSection">
+      <div class="row">
+        <div class="col-md-2 col-sm-12 userLeftSidePanel">
+          <h2>PhotoNuovo</h2>
+          <img src="images/placeholder.jpg" alt="" id="userLeftPanelProfilePic">
+          <h3>Name</h3>
+          <a href="#">
+            <p>My Shots</p>
+          </a>
+          <a href="#">
+            <p>My Followers</p>
+          </a>
+          <a href="#">
+            <p>Shots I Like</p>
+          </a>
+          <a href="#">
+            <p>Following</p>
+          </a>
+          <a href="#" id="signOutLink">
+            <p>Sign Out</p>
+          </a>
+
+
+
+        </div>
+        <div class="col-md-10 col-sm-12">
+          <h1>Right side</h1>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- display image section -->
+    <section>
+
+    </section>
+
+
+    <!-- recent images section -->
+    <section>
+
+    </section>
+
+
+
+
+
+
+    <!-- footer section -->
+    <section id="footerSection">
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBgDX7UCxmBivsvj-5us0wpEy-bHwFC1oA",
+        authDomain: "photonuovo-3ba1f.firebaseapp.com",
+        databaseURL: "https://photonuovo-3ba1f.firebaseio.com",
+        projectId: "photonuovo-3ba1f",
+        storageBucket: "photonuovo-3ba1f.appspot.com",
+        messagingSenderId: "489998201120",
+        appId: "1:489998201120:web:ca3783c3f46546e7"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- Internal JS -->
+    <script src="js/index.js" charset="utf-8"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
