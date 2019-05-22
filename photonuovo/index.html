@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>PhotoNuovo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootstrap Css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,7 +13,44 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
+
 <body>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12" id="theModalBody">
+
+              <img id="blah" src="images/imagePlaceholder.png" alt="your image"/>
+              <input id="uploaderButton" type='file' onchange="readURL(this);" style="margin-top:20px;"/>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="closeUploadWindowButton" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="uploadImageButton">Upload!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <img id="largeModalImage" src="images/placeholder.jpg" alt="">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
   <!-- loader div -->
   <section id="loaderSection">
     <div class="loader">
@@ -199,12 +237,137 @@
           <a href="#" id="signOutLink">
             <p>Sign Out</p>
           </a>
+          <button type="button" name="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Upload A Shot</button>
 
 
 
         </div>
         <div class="col-md-10 col-sm-12">
-          <h1>Right side</h1>
+          <h3>#Discover</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img id="cardImageId1" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img id="cardImageId2" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId3" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId4" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId5" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId6" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId7" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId8" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId9" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId10" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId11" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12" style="margin-top:20px;">
+              <div class="card">
+                <img  id="cardImageId12" class="card-img-top" src="images/placeholder.jpg" alt="Card image cap" data-toggle="modal" data-target=".bd-example-modal-lg">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
         </div>
 
       </div>
@@ -232,6 +395,7 @@
     <!-- footer section -->
     <section id="footerSection">
 
+
     </section>
 
 
@@ -247,6 +411,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-storage.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#config-web-app -->

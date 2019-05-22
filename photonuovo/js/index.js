@@ -2,6 +2,37 @@ var database = firebase.database();
 database.ref("users").set("something else");
 
 var user = firebase.auth().currentUser;
+var imageLocation = "";
+var dateOBJ = new Date();
+var day = dateOBJ.getDate();
+
+var month = dateOBJ.getMonth() + 1;
+var year = dateOBJ.getFullYear();
+// Event Listeners
+document.getElementById("uploadImageButton").addEventListener("click", function() {
+
+  if (imageLocation != "") {
+    var user = firebase.auth().currentUser;
+    var uid = user.uid;
+    var keyGen = firebase.database().ref("img").push();
+    var storageRef = firebase.storage().ref('photos/' + uid + "/" + keyGen.key);
+    storageRef.putString(imageLocation, 'data_url').then(function(snapshot) {
+      storageRef.getDownloadURL().then(function(url) {
+
+        writeImageData(uid, keyGen.key, url, day, month, year);
+        document.getElementById("blah").src = "images/imagePlaceholder.png";
+        document.getElementById("uploaderButton").value = "";
+        document.getElementById("closeUploadWindowButton").click();
+      }).catch(function(error) {
+        // Handle any errors
+      });
+      console.log('Uploaded a data_url string!');
+    });
+  } else {
+    ("Image location is empty");
+  }
+});
+
 
 setTimeout(function() {
   removeElementFromFlow("loaderSection");
@@ -30,21 +61,37 @@ firebase.auth().onAuthStateChanged(function(user) {
     removeElementFromFlow("recents-section");
     removeElementFromFlow("logRegSection");
     addElementToFlow("userLandingSection");
+    var dataRef = firebase.database().ref('imagesDetails');
+    dataRef.on('value', function(snapshot) {
+      var idVal = 1;
+      snapshot.forEach(function(child) {
+
+        document.getElementById('cardImageId'+idVal).src = child.val().image;
+        (child.val().image);
+
+        document.getElementById('cardImageId'+idVal).addEventListener("click",function(){
+          document.getElementById("largeModalImage").src = child.val().image;
+        });
+        idVal++;
+      });
+    });
+
+
 
   } else {
     addElementToFlow("logRegSection");
-    removeElementFromFlow("userLandingSection")
+    removeElementFromFlow("userLandingSection");
   }
 });
 
 
 
-document.getElementById("signOutLink").addEventListener("click",function(){
+document.getElementById("signOutLink").addEventListener("click", function() {
   firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}).catch(function(error) {
-  // An error happened.
-});
+    // Sign-out successful.
+  }).catch(function(error) {
+    // An error happened.
+  });
 });
 
 
@@ -66,10 +113,10 @@ document.getElementById("loginButton").addEventListener("click", function() {
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
-    alert(errorMessage);
+    (errorMessage);
   });
 
-  alert("Done");
+  ("Done");
 });
 
 document.getElementById("registerButton").addEventListener("click", function() {
@@ -80,8 +127,19 @@ document.getElementById("registerButton").addEventListener("click", function() {
     var errorMessage = error.message;
   });
 
-  alert("Done");
+  ("Done");
 });
+
+function writeImageData(userId, imageID, imageLink, postedDay, postedMonth, postedYear) {
+  firebase.database().ref("imagesDetails/" + imageID).set({
+    uid: userId,
+    image: imageLink,
+    day: postedDay,
+    month: postedMonth,
+    year: postedYear,
+    likes: 0
+  });
+}
 
 function removeElementFromFlow(element) {
   document.getElementById(element).style.display = "none";
@@ -91,4 +149,19 @@ function addElementToFlow(element) {
 
   document.getElementById(element).style.display = "block";
 
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah')
+        .attr('src', e.target.result);
+      imageLocation = e.target.result;
+
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
 }
