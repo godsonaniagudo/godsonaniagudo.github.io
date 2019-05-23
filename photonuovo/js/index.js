@@ -1,15 +1,20 @@
+// Global variable declarations
+
 var database = firebase.database();
 database.ref("users").set("something else");
-
 var user = firebase.auth().currentUser;
 var imageLocation = "";
+
+
+// Date objects
 var dateOBJ = new Date();
 var day = dateOBJ.getDate();
-
 var month = dateOBJ.getMonth() + 1;
 var year = dateOBJ.getFullYear();
-// Event Listeners
 
+
+
+// Event Listeners
 document.getElementById("myProfileLink").addEventListener("click",function(){
 removeElementFromFlow("discoverSection");
 addElementToFlow("userAccountSection");
@@ -45,6 +50,14 @@ document.getElementById("uploadImageButton").addEventListener("click", function(
 });
 
 
+document.getElementById("toRegisterLoginSection").addEventListener("click", function() {
+  removeElementFromFlow("headerSection");
+  removeElementFromFlow("recents-section");
+  addElementToFlow("logRegSection");
+
+});
+
+// Run on load
 setTimeout(function() {
   removeElementFromFlow("loaderSection");
   addElementToFlow("visibleBodySection");
@@ -59,46 +72,14 @@ setTimeout(function() {
   }
 }, 3000);
 
-document.getElementById("toRegisterLoginSection").addEventListener("click", function() {
-  removeElementFromFlow("headerSection");
-  removeElementFromFlow("recents-section");
-  addElementToFlow("logRegSection");
-
+document.getElementById("registerButton").addEventListener("click", function() {
+  var email = document.getElementById("regEmailField").value;
+  var password = document.getElementById("regPasswordField").value;
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+  });
 });
-
-
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    removeElementFromFlow("headerSection");
-    removeElementFromFlow("recents-section");
-    removeElementFromFlow("logRegSection");
-    removeElementFromFlow("userAccountSection");
-    addElementToFlow("userLandingSection");
-    var dataRef = firebase.database().ref('imagesDetails');
-    dataRef.on('value', function(snapshot) {
-      var idVal = 1;
-      snapshot.forEach(function(child) {
-
-        document.getElementById('cardImageId'+idVal).src = child.val().image;
-
-        document.getElementById('cardImageId'+idVal).addEventListener("click",function(){
-          document.getElementById("largeModalImage").src = child.val().image;
-        });
-        idVal++;
-      });
-    });
-
-
-
-  } else {
-    addElementToFlow("logRegSection");
-    removeElementFromFlow("userLandingSection");
-    removeElementFromFlow("userAccountSection");
-  }
-});
-
-
 
 document.getElementById("signOutLink").addEventListener("click", function() {
   firebase.auth().signOut().then(function() {
@@ -131,15 +112,42 @@ document.getElementById("loginButton").addEventListener("click", function() {
   });
 });
 
-document.getElementById("registerButton").addEventListener("click", function() {
-  var email = document.getElementById("regEmailField").value;
-  var password = document.getElementById("regPasswordField").value;
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
+
+// State Listeners
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    removeElementFromFlow("headerSection");
+    removeElementFromFlow("recents-section");
+    removeElementFromFlow("logRegSection");
+    removeElementFromFlow("userAccountSection");
+    addElementToFlow("userLandingSection");
+    var dataRef = firebase.database().ref('imagesDetails');
+    dataRef.on('value', function(snapshot) {
+      var idVal = 1;
+      snapshot.forEach(function(child) {
+
+        document.getElementById('cardImageId'+idVal).src = child.val().image;
+
+        document.getElementById('cardImageId'+idVal).addEventListener("click",function(){
+          document.getElementById("largeModalImage").src = child.val().image;
+        });
+        idVal++;
+      });
+    });
+
+
+
+  } else {
+    addElementToFlow("logRegSection");
+    removeElementFromFlow("userLandingSection");
+    removeElementFromFlow("userAccountSection");
+  }
 });
 
+
+// Functions
+
+//Write data to Firebase storage
 function writeImageData(userId, imageID, imageLink, postedDay, postedMonth, postedYear) {
   firebase.database().ref("imagesDetails/" + imageID).set({
     uid: userId,
@@ -151,6 +159,7 @@ function writeImageData(userId, imageID, imageLink, postedDay, postedMonth, post
   });
 }
 
+//Add or remove elements from HTML flow
 function removeElementFromFlow(element) {
   document.getElementById(element).style.display = "none";
 }
@@ -161,6 +170,7 @@ function addElementToFlow(element) {
 
 }
 
+//Read url of selected image
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
