@@ -1,0 +1,203 @@
+a {
+  color: #d65a31;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Classes */
+.blocker {
+  display: block;
+}
+
+.brandText {
+  text-align: left;
+  padding-left: 30px;
+  color: #d65a31;
+  font-family: 'Righteous', cursive;
+  margin-top: 20px;
+
+
+}
+
+.brandTextSplash {
+  margin-top: 150px;
+  color: #d65a31;
+  font-family: 'Righteous', cursive;
+}
+
+
+.footerSection {
+  height: 50px;
+  background-color: #222831;
+}
+
+.forgotCenter {
+  text-align: center;
+}
+
+.loader {
+  animation: spin 2s linear infinite;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #d65a31;
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+}
+
+.loadingBlock {
+  padding-top: 150px;
+  text-align: center;
+
+}
+
+.loadingTitle {
+
+}
+
+
+
+.mainContent {
+  background-color: #f4f4f4
+}
+
+.marginSetter {
+  display: block;
+  margin-top: 10px;
+
+}
+
+.marginTop40 {
+  margin-top: 40px;
+}
+
+.padLeft {
+  padding-left: 100px;
+}
+
+.padRight {
+  padding-right: 90px;
+}
+
+.setPicContainer {
+  text-align: center;
+}
+
+.setPicHeader {
+  margin-top: 100px;
+}
+
+.setPicItems {
+  margin-top: 50px;
+}
+
+.signInDiv {
+  text-align: center;
+}
+
+.signInHeader {
+  display: block;
+}
+
+.signInItems {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 20px;
+  border-radius: 20px;
+  border: none;
+  border: solid 1px #ccc;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.signInJumbotron {
+  margin-left: 40px;
+  margin-right: 20px;
+}
+
+
+
+.signInContent {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.signInRow {
+  margin-top: 50px;
+}
+
+
+.shortTopMargin {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.splash {
+  background-image: url("splashpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 620px;
+  width: auto;
+}
+
+.splashJumbotron {
+  width: 30%;
+  position: absolute;
+  right: 30px;
+  background-color: #d65a31;
+  color: #ffffff;
+}
+
+.splashtext {
+  display: inline-block;
+  margin-top: 100px;
+  position: absolute;
+  right: 70px;
+  width: 30%;
+}
+
+.topMargin10 {
+  margin-top: 10px;
+}
+
+#createAccountSection {
+  text-align: center;
+}
+
+#loaderSection {
+  text-align: center;
+}
+
+
+#setProfilePictureSection {
+  text-align: center;
+}
+
+#signInSection {
+  text-align: center;
+}
+
+#visibleSection {
+  display: none;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
